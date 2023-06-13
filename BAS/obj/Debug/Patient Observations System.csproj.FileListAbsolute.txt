@@ -1,0 +1,30 @@
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\Patient Observations System.exe.config
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Home.g.cs
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Login.g.cs
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\App.g.cs
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient Observations System_MarkupCompile.cache
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient Observations System_MarkupCompile.lref
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\Patient Observations System.exe
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\Patient Observations System.pdb
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\MySql.Data.dll
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\Google.Protobuf.dll
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\MySql.Data.xml
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Home.baml
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Login.baml
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient Observations System.g.resources
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient_Observations_System.Properties.Resources.resources
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient Observations System.csproj.GenerateResource.Cache
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient Observations System.exe
+c:\users\schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient Observations System.pdb
+C:\Users\Schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Patient Observations System.csprojResolveAssemblyReference.cache
+C:\Users\Schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Register.g.cs
+C:\Users\Schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Register.baml
+C:\Users\Schinky\Documents\Visual Studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Records.g.cs
+C:\Users\Schinky\Documents\Visual Studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Records.baml
+C:\Users\Schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Schedule.g.cs
+C:\Users\Schinky\documents\visual studio 2015\Projects\Patient Observations System\Patient Observations System\obj\Debug\Schedule.baml
+C:\Users\Schinky\Documents\Visual Studio 2015\Projects\Biometric Attendance\Patient Observations System\bin\Debug\Patient Observations System.exe.config
+C:\Users\Schinky\Documents\Visual Studio 2015\Projects\Biometric Attendance\Patient Observations System\obj\Debug\Patient Observations System.exe
+C:\Users\Schinky\Documents\Visual Studio 2015\Projects\Biometric Attendance\Patient Observations System\obj\Debug\Patient Observations System.pdb
