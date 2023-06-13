@@ -1,0 +1,112 @@
+﻿<Window x:Class="Patient_Observations_System.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Patient_Observations_System"
+        mc:Ignorable="d"
+        Title="Register" Height="700" Width="1050" Background="White" Loaded="Register_Loaded" ResizeMode="CanMinimize" xmlns:ports ="clr-namespace:System.IO.Ports;assembly=System" >
+
+    <Window.Resources>
+        <ports:SerialPort x:Key="ComPort" DataReceived="DataReceivedHandler"></ports:SerialPort>
+        <BorderGapMaskConverter x:Key="BorderGapMaskConverter"/>
+        <Style x:Key="GroupBoxStyleRounded" TargetType="{x:Type GroupBox}">
+            <Setter Property="BorderBrush" Value="#D5DFE5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type GroupBox}">
+                        <Grid SnapsToDevicePixels="true">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="6"/>
+                            </Grid.RowDefinitions>
+                            <Border BorderBrush="Transparent" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="4" Grid.Column="0" CornerRadius="4" Grid.Row="1" Grid.RowSpan="3"/>
+                            <Border BorderBrush="White" BorderThickness="{TemplateBinding BorderThickness}" Grid.ColumnSpan="4" CornerRadius="10" Grid.Row="1" Grid.RowSpan="3">
+                                <Border.OpacityMask>
+                                    <MultiBinding ConverterParameter="7" Converter="{StaticResource BorderGapMaskConverter}">
+                                        <Binding ElementName="Header" Path="ActualWidth"/>
+                                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource Self}"/>
+                                        <Binding Path="ActualHeight" RelativeSource="{RelativeSource Self}"/>
+                                    </MultiBinding>
+                                </Border.OpacityMask>
+                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                    <Border BorderBrush="White" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10"/>
+                                </Border>
+                            </Border>
+                            <Border x:Name="Header" Grid.Column="1" Padding="3,1,3,0" Grid.Row="0" Grid.RowSpan="2">
+                                <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Border>
+                            <ContentPresenter Grid.ColumnSpan="2" Grid.Column="1" Margin="{TemplateBinding Padding}" Grid.Row="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF333337">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="967*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Name" HorizontalAlignment="Left" Margin="4.5,78,0,0" VerticalAlignment="Top" Height="58" Width="114" FontSize="24" Foreground="White" Grid.ColumnSpan="2" Grid.Column="1" />
+        <Label x:Name="label_Copy" Content="Surname" HorizontalAlignment="Left" Margin="4.5,134,0,0" VerticalAlignment="Top" Height="58" Width="148" FontSize="24" Foreground="White" Grid.ColumnSpan="2" Grid.Column="1" />
+        <Label x:Name="label_Copy1" Content="Sex" HorizontalAlignment="Left" Margin="4.5,200,0,0" VerticalAlignment="Top" Height="58" Width="114" FontSize="24" Foreground="White" Grid.ColumnSpan="2" Grid.Column="1" />
+        <Label x:Name="label_Copy2" Content="D.O.B" HorizontalAlignment="Left" Margin="4.5,328,0,0" VerticalAlignment="Top" Height="58" Width="148" FontSize="24" Foreground="White" Grid.ColumnSpan="2" Grid.Column="1" />
+        <Label x:Name="label_Copy4" Content="ID Number" HorizontalAlignment="Left" Margin="4.5,265,0,0" VerticalAlignment="Top" Height="58" Width="168" FontSize="24" Foreground="White" Grid.ColumnSpan="2" Grid.Column="1" />
+        <TextBox x:Name="nameTB" HorizontalAlignment="Left" Height="37" Margin="145,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" FontSize="24" TextAlignment="Center" Grid.Column="2"/>
+        <TextBox x:Name="surnameTB" HorizontalAlignment="Left" Height="37" Margin="145,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" FontSize="24" TextAlignment="Center" Grid.Column="2"/>
+        <TextBox x:Name="idTB" HorizontalAlignment="Left" Height="37" Margin="145,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" FontSize="24" TextAlignment="Center" Grid.Column="2"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="657,82,0,0" VerticalAlignment="Top" Width="188" Height="47" FontSize="24" Grid.Column="2"/>
+        <Label x:Name="label_Copy5" Content="COM Port" HorizontalAlignment="Left" Margin="653,47,0,0" VerticalAlignment="Top" Height="58" Width="188" FontSize="24" Foreground="White" Grid.Column="2" />
+        <GroupBox x:Name="groupBox" Header="Employee Details" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="565" Width="482" Foreground="#FFE0D514" FontSize="24" Style="{DynamicResource GroupBoxStyleRounded}" Background="#FF3F3F46" Panel.ZIndex="-1" BorderBrush="#FFE0D514" FontStyle="Italic" Grid.ColumnSpan="3">
+            <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="204,260,0,0" VerticalAlignment="Top" SelectedDate="{Binding PropertyName, StringFormat=yyyy/MM/dd}"/>
+        </GroupBox>
+        <GroupBox x:Name="groupBox_Copy" Header="Settings" HorizontalAlignment="Left" Margin="479,10,0,0" VerticalAlignment="Top" Height="213" Width="432" Foreground="#FFE0D514" FontSize="24" Style="{DynamicResource GroupBoxStyleRounded}" Background="#FF3F3F46" Panel.ZIndex="-1" BorderBrush="#FFE0D514" FontStyle="Italic" Grid.Column="2" >
+            <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="173,114,0,0" VerticalAlignment="Top" Width="188" Height="47" FontStyle="Normal" Click="btnConnect_Click"/>
+        </GroupBox>
+        <Button x:Name="btnCollect" Content="Register" HorizontalAlignment="Left" Margin="767,495,0,0" VerticalAlignment="Top" Width="188" Height="89" FontSize="32" Click="btnCollect_Click" Grid.Column="2">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="10" Background="LightBlue">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="551,612,0,0" VerticalAlignment="Top" Width="188" Height="47" FontSize="24" Click="btnBack_Click" Grid.Column="2"/>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" Margin="767,612,0,0" VerticalAlignment="Top" Width="188" Height="47" FontSize="24" Click="btnHome_Click" RenderTransformOrigin="1.505,-2.043" Grid.Column="2"/>
+        <GroupBox x:Name="groupBox_Copy1" Header="Enrolment Status" HorizontalAlignment="Left" Margin="479,230,0,0" VerticalAlignment="Top" Height="243" Width="432" Foreground="#FFE0D514" FontSize="24" Style="{DynamicResource GroupBoxStyleRounded}" Background="#FF3F3F46" Panel.ZIndex="-1" BorderBrush="#FFE0D514" FontStyle="Italic" Grid.Column="2">
+            <Label x:Name="label2" Content="..." HorizontalAlignment="Left" Margin="67,26,0,0" VerticalAlignment="Top"/>
+        </GroupBox>
+        <ComboBox x:Name="sexCB" HorizontalAlignment="Left" Margin="145,200,0,0" VerticalAlignment="Top" Width="90" Height="37" FontSize="24" Grid.Column="2">
+            <ComboBoxItem Content="M"/>
+            <ComboBoxItem Content="F"/>
+            <ComboBoxItem Content="NB"/>
+            <ComboBoxItem Content="O"/>
+
+        </ComboBox>
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="100" Margin="445,484,0,0" VerticalAlignment="Top" Width="294" FontSize="16" Grid.Column="2">
+            <FlowDocument/>
+        </RichTextBox>
+        <Label x:Name="label_Copy3" Content="Department" HorizontalAlignment="Left" Margin="4.5,395,0,0" VerticalAlignment="Top" Height="58" Width="168" FontSize="24" Foreground="White" Grid.ColumnSpan="2" Grid.Column="1" />
+        <TextBox x:Name="dptTB" HorizontalAlignment="Left" Height="37" Margin="145,395,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" FontSize="24" TextAlignment="Center" Grid.Column="2"/>
+        <Label x:Name="label_Copy6" Content="Finger ID" HorizontalAlignment="Left" Margin="145,542,0,0" VerticalAlignment="Top" Height="58" Width="110" FontSize="24" Foreground="White" Grid.Column="2" />
+        <TextBox x:Name="fingerTB" HorizontalAlignment="Left" Height="37" Margin="145,500,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90" FontSize="24" TextAlignment="Center" Grid.Column="2"/>
+        <Label x:Name="label1" Content="..." HorizontalAlignment="Left" Margin="551,344,0,0" VerticalAlignment="Top" Grid.Column="2" FontSize="24" FontStyle="Italic"/>
+        <Label x:Name="statusLabel" Content="..." HorizontalAlignment="Left" Margin="38,612,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Width="322" FontSize="24" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="Patient_Observations_System.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Patient_Observations_System"
+        mc:Ignorable="d"
+        Title="Biometric Attendance System Login" Height="350" Width="525" Background="White" ResizeMode="CanMinimize">
+    <Grid Background="#FF333337">
+        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="150,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.632,2.077" Height="33" Width="80" FontSize="16" Foreground="White"/>
+        <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="150,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.632,2.077" Height="33" Width="76" FontSize="16" Foreground="White"/>
+        <TextBox x:Name="usernameTB" HorizontalAlignment="Left" Height="30" Margin="244,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" TextAlignment="Center"/>
+        <Button x:Name="loginBtn" Content="Login" HorizontalAlignment="Left" Margin="244,201,0,0" VerticalAlignment="Top" Width="96" Height="25" FontSize="16" Click="loginBtn_Click"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="244,141,0,0" VerticalAlignment="Top" Width="153" Height="30" HorizontalContentAlignment="Center"/>
+        <Label x:Name="msgLabel" Content="" HorizontalAlignment="Left" Margin="244,256,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="icons8_password_512px_1_png" Margin="244,29,215,232" Source="/Resources/icons8_password_512px_1.png" Stretch="Fill"/>
+        <Label x:Name="label1" Content="Biometric Attendance System" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="#FFF7E102" FontFamily="Segoe Script" FontSize="16" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
